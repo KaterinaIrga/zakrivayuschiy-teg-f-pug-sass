@@ -1,0 +1,18 @@
+@mixin background {
+  background: url(../../images/background2.png)  no-repeat center / cover;
+  position: relative;
+  z-index: -2;
+
+  &:after {
+    content: "";
+    background: $header-background-gradient no-repeat center / cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: inherit;
+    display: block;
+    opacity: .25;
+    z-index: -1;
+  }
+}

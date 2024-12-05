@@ -1,0 +1,11 @@
+@import '../../mixins/display-flex-column/display-flex-column';
+
+.main {
+  
+  margin-block-start: -140px;
+  @include display-flex-column(50px);
+
+    &__card-list {
+      @include display-flex-column(50px);
+    }
+}

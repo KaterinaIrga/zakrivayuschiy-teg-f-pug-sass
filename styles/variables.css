@@ -1,0 +1,14 @@
+/* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+
+:root {
+  --font-color-base: #000; 
+  --font-color-lite: color-mix(in lch var(--font-color-base), transpdrent 25%);
+  --font-title-size: 49px;
+  --font-subtitle-size: 14px;
+  --font-card-size: 18px;
+  --font-family-base: 'PressStart2P';
+  --font-family-card: 'Inter-Variable';
+  --font-weight-base: 400;
+  --line-height-base: 100%;
+  --line-height-card-title: 21px;
+}

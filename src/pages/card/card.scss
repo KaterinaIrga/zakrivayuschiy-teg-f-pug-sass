@@ -1,0 +1,96 @@
+@import '../../globals/variables';
+@import '../../mixins/card/card';
+@import '../../mixins/text/text';
+
+.card {
+  @include card(375px/* $min-screen-width */);
+  /* @include card($max-screen-width); */
+
+    &__title {
+      grid-column: 1/ -1;
+      grid-row: 1;
+      text-shadow: 0 4px 4px $font-color-lite;
+      @include text($font-color-base, 
+                    $font-card-size, 
+                    $font-family-card, 
+                    $font-weight-bold, 
+                    $line-height-base); 
+    }
+
+    &__image-box {
+      position: relative;
+      grid-column: 1/ -1;
+      grid-row: 2;
+      box-shadow: 0 4px 4px $font-color-lite;
+      border: 2px solid #000;
+      
+    }
+
+    &__image {
+      
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+      
+    }
+
+    &__water-mark {
+      position: absolute;
+      inset-inline-end: 25px;
+      inset-block-start: 25px;
+      text-transform: uppercase;
+
+      text-shadow: 1px 0 1px #fff, 
+                   0 1px 1px #fff, 
+                   -1px 0 1px #fff, 
+                   0 -1px 1px #fff;
+      @include text($font-color-base, 
+                    $font-subtitle-size, 
+                    $font-family-base, 
+                    $font-weight-base, 
+                    $line-height-base); 
+
+      
+    }
+
+    
+
+    &__content {
+      grid-column: 1/ -1;
+      grid-row: 3;
+      display: grid;
+      row-gap: 25px;
+      grid-template-rows: 1fr 38px;
+      grid-template-columns: repeat(2, 1fr);
+      padding: 25px;
+    }
+
+    &__paragraph {
+      grid-column: 1/ -1;
+      grid-row: 1;
+      padding-block-end: 27px;
+      @include text($font-color-base, 
+                    $font-card-size, 
+                    $font-family-card, 
+                    $font-weight-base, 
+                    $line-height-card-title); 
+    }
+
+  /*   &__heart {
+      grid-column: 1;
+      grid-row: 2;
+      align-self: self-end;
+    }
+ */
+   
+
+    &__like-button {
+      border: 2px solid #000;
+      box-shadow: 2px 2px $font-color-base;
+      grid-column: 2;
+      grid-row: 2;
+      justify-self: self-end;      
+      width: 169px;
+      height: 38px;
+    }
+}

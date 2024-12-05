@@ -1,0 +1,42 @@
+@import '../../fonts/fonts';
+@import '../../globals/variables';
+@import '../../mixins/text/text';
+@import '../../mixins/background/background';
+
+.header {
+  block-size: 667px;
+  box-shadow: 0 4px 4px $font-color-lite;
+  @include background;
+
+    &__card {
+      background-color: #fff;
+      height: 327px;
+      margin-block-start: 100px;
+      text-align: center;
+    }
+
+    &__title {
+      padding-block-start: 120px;
+      display: block;
+      margin-inline: auto;
+      text-transform: uppercase;
+      text-align: center;
+      text-shadow: 0 4px 4px $font-color-lite;
+      @include text($font-color-base, 
+                    $font-title-size, 
+                    $font-family-base, 
+                    $font-weight-base, 
+                    $line-height-base); 
+    }
+
+    &__subtitle {
+      margin-block-start: 20px;
+      margin-block-end: 25px;
+      text-align: center;
+      @include text($font-color-base, 
+                    $font-subtitle-size, 
+                    $font-family-base, 
+                    $font-weight-base, 
+                    $line-height-base); 
+    }
+}

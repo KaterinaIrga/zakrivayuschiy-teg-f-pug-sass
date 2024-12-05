@@ -1,0 +1,28 @@
+@import '../../mixins/text/text';
+
+.save-button {
+  height: 80px;
+  width: 306px;
+  border: 2px solid #000;
+  margin-block-end: 100px;
+  margin-inline: auto;
+
+  &__icon {
+    width: 28px;
+    height: 28px;
+    margin-inline: auto;
+  }
+
+  &__lable {
+    @include text($font-color-base, 
+                  $font-subtitle-size, 
+                  $font-family-base, 
+                  $font-weight-base, 
+                  $line-height-min); 
+
+
+  }
+}
+
+
+

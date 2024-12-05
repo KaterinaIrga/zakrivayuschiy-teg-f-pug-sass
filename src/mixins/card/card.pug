@@ -1,0 +1,16 @@
+mixin card(title, imgSrc, imgAlt, text, waterMark)
+  article.card 
+    h2.card__title= title 
+    div.card__image-box
+      img.card__image(src=imgSrc alt=imgAlt)
+      if waterMark != 'care'
+        p.card__water-mark= '<' + waterMark + '>'
+      else
+        p.card__water-mark= waterMark
+    div.card__content
+      p.card__paragraph= text      
+      button.button.card__icon-button
+        div.like-icon
+      button.button.card__like-button 
+        p.button__text Like
+      

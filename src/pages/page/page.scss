@@ -1,0 +1,9 @@
+@import '../mixins/display-flex-column/display-flex-column';
+
+
+.page {
+  max-width: 696px;
+  min-width: 375px;
+  margin-inline: auto;
+  @include display-flex-column(50px);
+}
